@@ -1,4 +1,4 @@
-# Learning-C-
+# Learning C++
 This is just some programs I wrote using c++ for learning
 
 ## How to install c++ compiler
