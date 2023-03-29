@@ -3,8 +3,8 @@ This is just some programs I wrote using c++ for learning
 
 ## How to install c++ compiler
 
-Since I am using linux pop os, it came with gcc and c++ i did not have
-to install it but in case you don't have it install on your pc type the
+Since I am using linux pop os, it came with g++ and c++ commands so i did not have
+to install it but in case you don't have it installed on your pc type the
 following.
 
 - For Debian/Ubuntu
