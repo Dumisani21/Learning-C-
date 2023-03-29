@@ -22,8 +22,8 @@ sudo dnf install gcc-c++
 
 ### How to compile c++
 I am using linux to compile my cpp files so I use g++ or c++
-also remember that you can't install the c++ command as mine came 
-with it installed so is you computer not have this command use g++
+also remember that you can't install the c++ command and as mine came 
+with it installed so if your computer does not have this command use g++
 - g++ example
 ```bash
 g++ app.cpp -o app.out
