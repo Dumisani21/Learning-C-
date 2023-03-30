@@ -15,17 +15,17 @@ void printl(const string& message);
 char input();
 
 void print(const string& message) {
-  std::cout << message;
+  cout << message;
 }
 
 void printl(const string& message) {
-  std::cout << message << "\n";
+  cout << message << "\n";
 }
 
 char input(){
     char data;
-    std::cin.get(data);
-    std::cin.ignore(100, '\n'); // Ignore any remaining input on the line
+    cin.get(data);
+    cin.ignore(100, '\n'); // Ignore any remaining input on the line
     return data;
 }
 
@@ -63,13 +63,41 @@ int main() {
     int limit = 12;
     int ranWordIndex = randomNum(rd, length-1);
     string guess = muskWord(rd, words[ranWordIndex]);
-    
+    printl("For help type ?");
     printl("Your guess is :" + guess);
     while (true) {
         print("Enter guess: ");
         char guessLetter = input();
-        
-        bool result = updateGuess(guess, )
+        print("\n");
+
+        if (guessLetter  == '!') {
+            printl("sad to see you leave :( Goodbye.");
+            print("\n");
+            break;
+        } else if (guessLetter == '?') {
+
+            printl("You can only type in characters");
+            printl("Help : ?\nQiut : !");
+
+        }else {
+
+            bool result = updateGuess(guess, words[ranWordIndex], guessLetter);
+            if (guess == words[ranWordIndex]) {
+                printl("Welldone you win.");
+                printl("The word is: " + words[ranWordIndex]);
+                print("\n");
+                break;
+            }else if (result) {
+                printl("Correct guess");
+                printl("Your guess is :" + guess);
+                print("\n");
+            } else {
+                printl("Wrong guess");
+                printl("Your guess is :" + guess);
+                print("\n");
+            }
+
+        }        
     }
 
     return 0;
